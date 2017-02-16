@@ -3,59 +3,48 @@ package Execises;
 
 
 public class Patient {
-    private Integer ID;
-    private String Nombre;
-    private String [] RH;
-    private String [] tipo;
+  private String id;
+  private Integer age;
+  private BloodData sangre;
 
-     public Patient(String RH,String tipo,Integer ID, String Nombre) {
-
+    public Patient() {
+        id="0";
+        age=0;
+        sangre=new BloodData();
     }
-    public Integer getID() {
-        return ID;
-    }
-
-    public void setID(Integer ID) {
-        this.ID = ID;
-    }
-
-    public String getNombre() {
-        return Nombre;
+    
+     public Patient(String id,Integer age,BloodData sangre) {
+        this.id=id;
+        this.age=age;
+        this.sangre=sangre; 
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public String getId() {
+        return id;
     }
-   
-    public void Datospaciente(Integer ID,String nombre){
-        System.out.println("SU ID ES: "+ID);
-        System.out.println("EL NOMBRE DEL PACIENTE: "+nombre);
+
+    public void setId(String id) {
+        this.id = id;
     }
-     public void datos(String sangre, String RH) {
-        this.RH = new String[4];
-        this.RH[0] = "+";
-        this.RH[1] = "-";
-        tipo = new String[4];
-        tipo[0] = "O";
-        tipo[1] = "A";
-        tipo[2] = "B";
-        tipo[3] = "AB";
-        if ((tipo[0].equals(sangre)) && (this.RH[0].equals(RH))) {
-            System.out.println(tipo[0] + " " + this.RH[0]);
-        } else if ((tipo[0].equals(sangre)) && (this.RH[1].equals(RH))) {
-            System.out.println(tipo[0] + " " + this.RH[1]);
-        } else if ((tipo[1].equals(sangre)) && (this.RH[0].equals(RH))) {
-            System.out.println(tipo[1] + " " + this.RH[0]);
-        } else if ((tipo[1].equals(sangre)) && (this.RH[1].equals(RH))) {
-            System.out.println(tipo[1] + " " + this.RH[1]);
-        } else if ((tipo[2].equals(sangre)) && (this.RH[0].equals(RH))) {
-            System.out.println(tipo[2] + " " + this.RH[0]);
-        } else if ((tipo[2].equals(sangre)) && (this.RH[1].equals(RH))) {
-            System.out.println(tipo[2] + " " + this.RH[1]);
-        } else if ((tipo[3].equals(sangre)) && (this.RH[0].equals(RH))) {
-            System.out.println(tipo[3] + " " + this.RH[0]);
-        } else if ((tipo[3].equals(sangre)) && (this.RH[1].equals(RH))) {
-            System.out.println(tipo[3] + " " + this.RH[1]);
-        }
+
+    public Integer getAge() {
+        return age;
     }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public BloodData getSangre() {
+        return sangre;
+    }
+
+    public void setSangre(BloodData sangre) {
+        this.sangre = sangre;
+    }
+     
+     
+    
+  
+    
 }

@@ -1,23 +1,18 @@
 package Execises;
 
+import Execises.Enum.Blood;
+import Execises.Enum.Rhfactor;
 import java.util.Scanner;
 
 public class TestPatient {
 
     public static void main(String[] args) {
-        String sangre = null, RH = null, nombre = null;
-        Integer ID = null;
-        Scanner teclado = new Scanner(System.in);
-        Patient paciente = new Patient(RH, sangre, ID, nombre);
-        System.out.println("ingresa tu tipo de sangre");
-        sangre = teclado.next();
-        System.out.println("ingresa tu RH");
-        RH = teclado.next();
-        System.out.println("ingresa tu ID");
-        ID = teclado.nextInt();
-        System.out.println("ingresa el nombre del paciente");
-        nombre = teclado.next();
-        paciente.Datospaciente(ID, nombre);
-        paciente.datos(sangre, RH);
+       Patient paciente1=new Patient();
+       BloodData sangre=new BloodData(Blood.AB,Rhfactor.NEGATIVO);
+       Patient paciente2=new Patient("5",18,sangre);
+       System.out.println(sangre.getTipo());
+       System.out.println(paciente2.getSangre().getTipo());
+       sangre.setTipo(Blood.O);
+       System.out.println(paciente2.getSangre().getTipo());
     }
 }
