@@ -6,12 +6,9 @@ public class GasPrices {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-
         System.out.println("introduce el valor del barril");
         int pricePerBarrel = teclado.nextInt();
-
         precio(pricePerBarrel);
-
     }
 
     public static void precio(double x) {
