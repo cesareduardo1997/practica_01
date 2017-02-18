@@ -5,13 +5,13 @@ package Exercises;
 public class TestSandwich {
      public static void main(String[] args) {
     
-        Sandwich comida=new Sandwich();
-        comida.setIngredient("atun");
-        comida.setpan("blanco");
-        comida.setprecio(8.90);
+        Sandwich desayuno=new Sandwich();
+        desayuno.setIngrediente("atun");
+        desayuno.setpan("blanco");
+        desayuno.setprecio(4.99);
         
-        System.out.println(comida.getIngrediente());
-        System.out.println(comida.getpan());
-        System.out.println(comida.getprecio());
+        System.out.println(desayuno.getIngrediente());
+        System.out.println(desayuno.getpan());
+        System.out.println(desayuno.getprecio());
     }
 }

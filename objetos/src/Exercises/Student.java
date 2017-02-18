@@ -6,6 +6,13 @@ public class Student {
     private Integer credito;
     private Integer puntos;
     
+    public Student(){
+        id="9999";
+        credito=4;
+        puntos=12;
+        promedio();
+    }
+    
      public String getId(){
         return id; 
     }

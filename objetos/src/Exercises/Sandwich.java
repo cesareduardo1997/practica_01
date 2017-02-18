@@ -10,7 +10,7 @@ public class Sandwich {
         return ingrediente; 
     }
     
-    public void setIngredient(String i){
+    public void setIngrediente(String i){
         this.ingrediente=i;
     }
     

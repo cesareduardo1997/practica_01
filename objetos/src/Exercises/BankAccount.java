@@ -1,54 +1,49 @@
-
 package Exercises;
 
 import java.util.Scanner;
 
 public class BankAccount {
-     private String[] nombre;
+
+    private String nombre;
     private Integer ncuenta;
     private Double saldo;
-    
-public BankAccount(String a,Integer b, Double c){
-    
-    
-}   
-public void setnombre(String[] j){
-    nombre=j;
-}    
-public String[] getingrediente(){
-    return nombre;
-}
-public void setnumcuenta(Integer l){
-    ncuenta=l;
-}    
-public Integer getpan(){
-    return ncuenta;
-}
-public void setprecio(Double t){
-    saldo=t;
-}    
-public Double getprecio(){
-    return saldo;
-}
-public Double deductMonthlyFee(Double a){
-    
-    return a-4.00;
-}
-public void explainAccountPolicy(){
-    System.out.println("Por cada mes el saldo de su cuenta se reducira en $4.00");
-    
-}
- public static void main(String[] args) {
-     Scanner teclado=new Scanner(System.in);
-     System.out.println("Ingrese su nombre");
-     String nombre=teclado.next();
-     System.out.println("Ingrese su numero de cuenta");
-     int numcuenta=teclado.nextInt();
-     System.out.println("Ingrese su saldo ultimo");
-     double saldo=teclado.nextDouble();
-     
-     BankAccount cuenta=new BankAccount(nombre,numcuenta,saldo);
-     System.out.println("Su saldo en este momento es: "+cuenta.deductMonthlyFee(saldo) );
-     cuenta.explainAccountPolicy();
- }
+
+    public BankAccount(String nombre, Integer ncuenta, Double saldo) {
+        this.nombre = nombre;
+        this.ncuenta = ncuenta;
+        this.saldo = saldo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getNcuenta() {
+        return ncuenta;
+    }
+
+    public void setNcuenta(Integer ncuenta) {
+        this.ncuenta = ncuenta;
+    }
+
+    public Double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
+    }
+
+    public Double deductMonthlyFee(Double saldo) {
+        return saldo - 4.00;
+    }
+
+    public static void explainAccountPolicy() {
+        System.out.println("Por cada mes el saldo de su cuenta se reducira en $4.00");
+    }
+
 }
