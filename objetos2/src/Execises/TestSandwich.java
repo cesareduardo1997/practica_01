@@ -15,6 +15,6 @@ public class TestSandwich {
         System.out.println(pedido2.getCalorias());
 
         Sandwich pedido3 = new Sandwich(pedido1, pedido2);
-
+        System.out.println(pedido3.getRelleno());
     }
 }

@@ -15,4 +15,10 @@ public class Die {
       Integer  numero = (int)(Math.random() * 100) % 6 + 1;
        System.out.println(numero);
     }
+
+    @Override
+    public String toString() {
+        return "Die{" + "numAleatorio=" + numAleatorio + '}';
+    }
+    
 }
